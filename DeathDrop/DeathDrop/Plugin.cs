@@ -136,7 +136,7 @@ namespace DeathDrop
 						bool flag5;
 						bool flag6;
 						this.permissions_check_for_item_by_type_or_id(hat, permissions, out flag5, out flag6);
-						if (flag6) {
+						if (!flag6) { // was if flag6
 							if (permissions.Contains(cfg.Clothes.Hat)) {
 								goto IL_687;
 							}
@@ -195,7 +195,7 @@ namespace DeathDrop
 						bool flag11;
 						bool flag12;
 						this.permissions_check_for_item_by_type_or_id(mask, permissions, out flag11, out flag12);
-						if (flag12) {
+						if (!flag12) {
 							if (permissions.Contains(cfg.Clothes.Mask)) {
 								goto IL_B6E;
 							}
@@ -213,7 +213,7 @@ namespace DeathDrop
 						bool flag14;
 						this.permissions_check_for_item_by_type_or_id(glasses, permissions, out flag13, out flag14);
 						if (!flag14) {
-							if (!permissions.Contains(cfg.Clothes.Glasses)) {
+							if (permissions.Contains(cfg.Clothes.Glasses)) { // was !permissions
 								goto IL_CBA;
 							}
 						}
